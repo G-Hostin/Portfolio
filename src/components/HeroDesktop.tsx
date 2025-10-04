@@ -4,7 +4,7 @@ import { SplineScene } from "@/components/ui/splite";
 
 export default function Hero() {
   return (
-    <section className="hidden md:flex w-full min-h-[40vh] bg-black/80 flex items-center overflow-hidden">
+    <section className="w-full min-h-[40vh] bg-black/80 flex items-center overflow-hidden">
       <div className="flex w-full h-[40vh] flex-col md:flex-row overflow-hidden">
         {/* Texte */}
         <div className="flex-1 flex flex-col justify-center px-8 py-12 text-white">

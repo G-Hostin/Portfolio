@@ -10,13 +10,16 @@ export default function Header() {
     <header className="w-full h-16 flex items-center justify-between px-8 bg-black text-white border-b border-white/10 shadow-[0_4px_8px_rgba(255,255,255,0.25)] z-50">
       {/* Logo GHOST (stylisé) */}
       <div className="flex items-center space-x-2">
-        <Image
-          src="/logo.png"
-          alt="Logo Ghost"
-          width={120} // Ajuste selon ton design
-          height={40}
-          priority
-        />
+        <div className="relative w-[120px] h-10 shrink-0">
+          <Image
+            src="/logo.png"
+            alt="Logo Ghost"
+            fill
+            className="object-cover"
+            priority
+            sizes="120px" // utile pour le responsive
+          />
+        </div>
       </div>
 
       {/* Desktop nav */}

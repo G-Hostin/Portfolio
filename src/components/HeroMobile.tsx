@@ -3,7 +3,7 @@ import { SplineScene } from "@/components/ui/splite";
 
 export default function HeroMobile() {
   return (
-    <section className="md:hidden relative w-full min-h-[70vh] bg-black/80 overflow-hidden flex items-center">
+    <section className="relative w-full min-h-[70vh] bg-black/80 overflow-hidden flex items-center">
       <div className="absolute inset-0 z-0 opacity-60">
         <SplineScene
           scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"

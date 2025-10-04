@@ -1,12 +1,10 @@
 "use client";
-import HeroDesktop from "./HeroDesktop";
-import HeroMobile from "./HeroMobile";
+import HeroMobile from "@/components/HeroMobile";
+import HeroDesktop from "@/components/HeroDesktop";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 export default function Hero() {
-  return (
-    <>
-      <HeroDesktop />
-      <HeroMobile />
-    </>
-  );
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+  if (isDesktop === null) return <section className="w-full min-h-[40vh]" />; // placeholder identique SSR/Client
+  return isDesktop ? <HeroDesktop /> : <HeroMobile />;
 }
