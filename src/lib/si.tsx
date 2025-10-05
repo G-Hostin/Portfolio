@@ -12,3 +12,17 @@ export const fromSimpleIconData = (icon: SimpleIcon) => {
   Comp.displayName = `SI.${icon.slug ?? icon.title}`;
   return Comp;
 };
+
+export function makeIconComponent(
+  icon: SimpleIcon,
+  baseClass = "h-5 w-auto sm:h-6"
+): React.FC<React.SVGProps<SVGSVGElement>> {
+  const Base = fromSimpleIconData(icon);
+  const IconComponent: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
+    const cls = [baseClass, props.className].filter(Boolean).join(" ");
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    return <Base {...props} className={cls} />;
+  };
+  IconComponent.displayName = `${icon.title || "Icon"}Icon`;
+  return IconComponent;
+}

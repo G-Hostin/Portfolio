@@ -3,7 +3,7 @@
 
 import React from "react";
 import { LogoCarousel } from "@/components/ui/logo-carousel";
-import { fromSimpleIconData } from "@/lib/si"; //transforme l'objet de SI en composant React
+import { makeIconComponent } from "@/lib/si"; //transforme l'objet de SI en composant React
 import {
   siReact,
   siJavascript,
@@ -17,20 +17,17 @@ import {
 } from "simple-icons/icons";
 
 // Harmonise la taille/couleur de tous les logos
-const asLogo =
-  (Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>) =>
-  (p: React.SVGProps<SVGSVGElement>) =>
-    <Icon {...p} className="h-10 w-auto sm:h-12 text-white/90" />;
+const base = "h-10 w-auto sm:h-12 text-white/90";
 
-const ReactIcon = asLogo(fromSimpleIconData(siReact));
-const JSIcon = asLogo(fromSimpleIconData(siJavascript));
-const ReduxIcon = asLogo(fromSimpleIconData(siRedux));
-const SassIcon = asLogo(fromSimpleIconData(siSass));
-const GitIcon = asLogo(fromSimpleIconData(siGit));
-const GitHubIcon = asLogo(fromSimpleIconData(siGithub));
-const TSIcon = asLogo(fromSimpleIconData(siTypescript));
-const NextIcon = asLogo(fromSimpleIconData(siNextdotjs));
-const HtmlIcon = asLogo(fromSimpleIconData(siHtml5));
+const ReactIcon = makeIconComponent(siReact, base);
+const JSIcon = makeIconComponent(siJavascript, base);
+const ReduxIcon = makeIconComponent(siRedux, base);
+const SassIcon = makeIconComponent(siSass, base);
+const GitIcon = makeIconComponent(siGit, base);
+const GitHubIcon = makeIconComponent(siGithub, base);
+const TSIcon = makeIconComponent(siTypescript, base);
+const NextIcon = makeIconComponent(siNextdotjs, base);
+const HtmlIcon = makeIconComponent(siHtml5, base);
 
 const logos = [
   { id: 1, name: "React", img: ReactIcon },
