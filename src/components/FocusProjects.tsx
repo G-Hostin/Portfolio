@@ -191,14 +191,14 @@ function ProjectCard({ p }: { p: Project }) {
       {/* COLONNE DROITE — listes + liens */}
       <div className="md:col-span-7 rounded-xl p-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <SectionList title="Objectives" items={p.goals} />
-          <SectionList title="Tech Stack" items={p.stack} />
-          <SectionList title="Skills Developed" items={p.skills} />
-          <SectionList title="Results & Impact" items={p.results} />
+          <SectionList title="Objectifs" items={p.goals} />
+          <SectionList title="Stack technique" items={p.stack} />
+          <SectionList title="Skills développés" items={p.skills} />
+          <SectionList title="Resultats & impacts" items={p.results} />
         </div>
 
         <div className="mt-6">
-          <SectionList title="Improvements" items={p.improvements} />
+          <SectionList title="Améliorations" items={p.improvements} />
         </div>
 
         {/* Liens */}

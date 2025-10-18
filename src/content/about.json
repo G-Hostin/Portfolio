@@ -1,0 +1,22 @@
+[
+  {
+    "id": "histoire",
+    "title": "Mon histoire",
+    "body": "Issu du marketing (BTS NDRC), j’ai choisi de me spécialiser dans le web avec un titre de Développeur Web chez OpenClassrooms. Cette double sensibilité (contenu + produit) m’aide à rester simple, utile et cohérent."
+  },
+  {
+    "id": "aujourdhui",
+    "title": "Aujourd’hui",
+    "body": "Je conçois des parcours simples, des états clairs et des interfaces harmonieuses. Priorité à la lisibilité, aux performances et à la sémantique — les fondamentaux qui profitent aux utilisateurs et au SEO."
+  },
+  {
+    "id": "approche",
+    "title": "Ma façon de travailler",
+    "body": "Je démarre en Agile (Scrum) : objectifs courts, feedbacks réguliers, progression visible. Ce qui me caractérise : rigueur, goût du détail et envie d’apprendre en continu. Une décision de design ou de code doit toujours servir l’usage."
+  },
+  {
+    "id": "future",
+    "title": "Et pour la suite",
+    "body": "Rejoindre une startup pour contribuer à un produit innovant et enthousiasmant. Je poursuis en parallèle une montée en compétence sur l’IA, avec l’idée d’en faire un levier concret pour la qualité et la vitesse d’exécution."
+  }
+]
