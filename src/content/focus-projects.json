@@ -1,0 +1,75 @@
+[
+  {
+    "id": "argentbank",
+    "title": "ArgentBank — Secure Banking App",
+    "cover": "/images/projects/argentbank2.png",
+    "tech": ["React", "Redux", "Node.js"],
+    "context": "Application bancaire front-end construite à partir d’une API existante : authentification, gestion de session et mise à jour du profil utilisateur.",
+    "goals": [
+      "Implémenter une authentification sécurisée (login, token, persistence).",
+      "Créer des vues protégées et un flux utilisateur fluide (connexion → tableau de bord → édition profil).",
+      "Structurer le state global avec Redux, actions asynchrones et slices."
+    ],
+    "stack": [
+      "React (hooks, composants contrôlés)",
+      "Redux Toolkit (slices, thunks)",
+      "REST API (JWT, endpoints profil)"
+    ],
+    "skills": [
+      "Gestion d’état global et logique async côté client",
+      "Sécurisation de routes (guards) et redirections",
+      "Modélisation des types de données côté front",
+      "Tests manuels des scénarios critiques (auth, edit profil)"
+    ],
+    "results": [
+      "Parcours d’authentification complet et stable",
+      "Mise à jour du profil en temps réel",
+      "Structure Redux claire, facilement extensible"
+    ],
+    "improvements": [
+      "Ajouter des tests e2e (Cypress/Playwright)",
+      "Gérer le refresh token / rotation de tokens",
+      "Mettre en place des messages d’erreurs UX plus détaillés"
+    ],
+    "links": {
+      "github": "https://github.com/G-Hostin/ArgentBank-Frontend",
+      "demo": "https://argent-bank-mu.vercel.app/"
+    }
+  },
+  {
+    "id": "kasa",
+    "title": "Kasa — Housing Rental UI",
+    "cover": "/images/projects/kasa2.png",
+    "tech": ["React", "React Router", "Sass", "JavaScript"],
+    "context": "Refonte d’une application de location de logements : routing dynamique, composants réutilisables, gestion d’erreurs et animations légères.",
+    "goals": [
+      "Mettre en place un router côté client avec pages dynamiques (slug/ID).",
+      "Créer des composants UI modulaires (galerie, tags, collapses).",
+      "Soigner l’accessibilité et les états vides/erreurs."
+    ],
+    "stack": [
+      "React + React Router",
+      "Sass/SCSS (architecture utilitaire légère)",
+      "Lighthouse checks"
+    ],
+    "skills": [
+      "Routing (params, 404, redirections)",
+      "Composition de composants et lifting state",
+      "Optimisations de rendu et lazy-loading des assets"
+    ],
+    "results": [
+      "Interface responsive et accessible",
+      "Navigation fluide entre les logements",
+      "Codebase claire et documentée"
+    ],
+    "improvements": [
+      "Internationalisation (fr/en) et formats de date",
+      "Pré-chargement conditionnel des images de galerie",
+      "Tests unitaires des composants clés"
+    ],
+    "links": {
+      "github": "https://github.com/G-Hostin/Kasa",
+      "demo": "https://kasa-ghostin.vercel.app/"
+    }
+  }
+]

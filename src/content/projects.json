@@ -17,8 +17,8 @@
     "designation": "Debug • Front-End • Vanilla JS",
     "src": "/images/projects/724events.png",
     "links": {
-      "github": "https://github.com/ton-user/724-events",
-      "demo": "https://724-events-demo.example.com"
+      "github": "https://github.com/G-Hostin/724events",
+      "demo": "https://724events-git-main-ghostin.vercel.app/"
     }
   },
   {
@@ -28,8 +28,7 @@
     "designation": "SEO • Accessibilité • Performance",
     "src": "/images/projects/ninacarducci.webp",
     "links": {
-      "github": "https://github.com/ton-user/nina-carducci",
-      "demo": "https://nina-carducci-demo.example.com"
+      "github": "https://github.com/G-Hostin/Nina-Carducci"
     }
   },
   {
@@ -50,8 +49,7 @@
     "designation": "JavaScript • API • DOM • CRUD",
     "src": "/images/projects/sophie-bluel.webp",
     "links": {
-      "github": "https://github.com/ton-user/sophie-bluel",
-      "demo": "https://sophie-bluel-demo.example.com"
+      "github": "https://github.com/G-Hostin/Sophie-Bluel"
     }
   },
   {
@@ -61,8 +59,7 @@
     "designation": "HTML • SCSS • Animations • Mobile First",
     "src": "/images/projects/ohmyfood.png",
     "links": {
-      "github": "https://github.com/ton-user/ohmyfood",
-      "demo": "https://ohmyfood-demo.example.com"
+      "github": "https://github.com/G-Hostin/OhMyFood"
     }
   }
 ]

@@ -21,13 +21,13 @@ export default function HeroMobile() {
         </p>
         <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="#projects"
+            href="#contact"
             className="cta-animate px-6 py-3 text-sm font-medium rounded-full bg-neutral-200 text-neutral-950 text-center"
           >
             Contactez-moi
           </a>
           <a
-            href="#contact"
+            href="#projects"
             className="cta-animate px-6 py-3 text-sm font-medium rounded-full border border-neutral-200 text-neutral-200 text-center"
           >
             Découvrez mes projets

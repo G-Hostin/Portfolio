@@ -70,8 +70,16 @@ export default function ContactForm() {
   return (
     <section
       id="contact"
-      className="w-full bg-black/90 text-white py-20 px-4 md:px-12 flex justify-center"
+      className="w-full bg-black/90 text-white py-20 px-4 md:px-12 flex justify-center flex-col items-center"
     >
+      <div className="text-center mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold leading-normal bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+          Contactez-moi
+        </h2>
+        <p className="mt-3 text-neutral-300 max-w-3xl mx-auto">
+          Un projet en tête ou une question ? Contactez-moi via ce formulaire.
+        </p>
+      </div>
       <form
         onSubmit={onSubmit}
         noValidate
