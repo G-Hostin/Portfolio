@@ -14,6 +14,11 @@ interface Testimonial {
   name: string;
   designation: string;
   src: string;
+  links?: {
+    //Pour les liens github et demo
+    github?: string;
+    demo?: string;
+  };
 }
 interface Colors {
   name?: string;
@@ -33,6 +38,7 @@ interface CircularTestimonialsProps {
   autoplay?: boolean;
   colors?: Colors;
   fontSizes?: FontSizes;
+  renderActions?: (t: Testimonial) => React.ReactNode;
 }
 
 function calculateGap(width: number) {
@@ -43,7 +49,9 @@ function calculateGap(width: number) {
   if (width <= minWidth) return minGap;
   if (width >= maxWidth)
     return Math.max(minGap, maxGap + 0.06018 * (width - maxWidth));
-  return minGap + (maxGap - minGap) * ((width - minWidth) / (maxWidth - minWidth));
+  return (
+    minGap + (maxGap - minGap) * ((width - minWidth) / (maxWidth - minWidth))
+  );
 }
 
 export const CircularTestimonials = ({
@@ -51,6 +59,7 @@ export const CircularTestimonials = ({
   autoplay = true,
   colors = {},
   fontSizes = {},
+  renderActions,
 }: CircularTestimonialsProps) => {
   // Color & font config
   const colorName = colors.name ?? "#000";
@@ -98,7 +107,8 @@ export const CircularTestimonials = ({
       }, 5000);
     }
     return () => {
-      if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
+      if (autoplayIntervalRef.current)
+        clearInterval(autoplayIntervalRef.current);
     };
   }, [autoplay, testimonialsLength]);
 
@@ -119,7 +129,9 @@ export const CircularTestimonials = ({
     if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
   }, [testimonialsLength]);
   const handlePrev = useCallback(() => {
-    setActiveIndex((prev) => (prev - 1 + testimonialsLength) % testimonialsLength);
+    setActiveIndex(
+      (prev) => (prev - 1 + testimonialsLength) % testimonialsLength
+    );
     if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
   }, [testimonialsLength]);
 
@@ -127,10 +139,12 @@ export const CircularTestimonials = ({
   function getImageStyle(index: number): React.CSSProperties {
     const gap = calculateGap(containerWidth);
     const maxStickUp = gap * 0.8;
-    const offset = (index - activeIndex + testimonialsLength) % testimonialsLength;
+    const offset =
+      (index - activeIndex + testimonialsLength) % testimonialsLength;
     // const zIndex = testimonialsLength - Math.abs(offset);
     const isActive = index === activeIndex;
-    const isLeft = (activeIndex - 1 + testimonialsLength) % testimonialsLength === index;
+    const isLeft =
+      (activeIndex - 1 + testimonialsLength) % testimonialsLength === index;
     const isRight = (activeIndex + 1) % testimonialsLength === index;
     if (isActive) {
       return {
@@ -210,7 +224,10 @@ export const CircularTestimonials = ({
               </h3>
               <p
                 className="designation"
-                style={{ color: colorDesignation, fontSize: fontSizeDesignation }}
+                style={{
+                  color: colorDesignation,
+                  fontSize: fontSizeDesignation,
+                }}
               >
                 {activeTestimonial.designation}
               </p>
@@ -242,6 +259,11 @@ export const CircularTestimonials = ({
                   </motion.span>
                 ))}
               </motion.p>
+              {renderActions && (
+                <div className="actions">
+                  {renderActions(activeTestimonial)}
+                </div>
+              )}
             </motion.div>
           </AnimatePresence>
           <div className="arrow-buttons">
@@ -275,12 +297,12 @@ export const CircularTestimonials = ({
       <style jsx>{`
         .testimonial-container {
           width: 100%;
-          max-width: 56rem;
+          max-width: 72rem;
           padding: 2rem;
         }
         .testimonial-grid {
           display: grid;
-          gap: 5rem;
+          gap: 1rem;
         }
         .image-container {
           position: relative;
@@ -311,6 +333,13 @@ export const CircularTestimonials = ({
         .quote {
           line-height: 1.75;
         }
+        .actions {
+          margin-top: 1.25rem;
+          display: flex;
+          gap: 0.75rem;
+          align-items: center;
+          flex-wrap: wrap;
+        }
         .arrow-buttons {
           display: flex;
           gap: 1.5rem;
@@ -333,6 +362,7 @@ export const CircularTestimonials = ({
         @media (min-width: 768px) {
           .testimonial-grid {
             grid-template-columns: 1fr 1fr;
+            gap: 5rem;
           }
           .arrow-buttons {
             padding-top: 0;

@@ -122,7 +122,7 @@ const PROJECTS: Project[] = [
       "Tests unitaires des composants clés",
     ],
     links: {
-      github: "https://github.com/G-Hostin/Kasa", // TODO remplace
+      github: "https://github.com/G-Hostin/Kasa",
       demo: "https://kasa-ghostin.vercel.app/",
     },
   },
@@ -223,16 +223,6 @@ function ProjectCard({ p }: { p: Project }) {
               className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-neutral-200 hover:bg-white/10 transition"
             >
               Live Demo
-            </a>
-          )}
-          {p.links.video && (
-            <a
-              href={p.links.video}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-neutral-200 hover:bg-white/10 transition"
-            >
-              Demo Video
             </a>
           )}
         </div>

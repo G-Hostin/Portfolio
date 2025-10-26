@@ -1,51 +1,11 @@
 "use client";
 
+import projetsContent from "../content/projects.json";
 import { CircularTestimonials } from "@/components/ui/circular-testimonials";
+import { makeIconComponent } from "@/lib/si";
+import { siGithub } from "simple-icons/icons";
 
-const projects = [
-  {
-    quote:
-      "Application bancaire sécurisée avec authentification, gestion de profil et Redux.",
-    name: "ArgentBank",
-    designation: "React • Redux • Authentification • API",
-    src: "/images/projects/argentbank.png",
-  },
-  {
-    quote:
-      "Débogage complet et finalisation d’un site vitrine pour une agence évènementielle.",
-    name: "724 Events",
-    designation: "Debug • Front-End • Vanilla JS",
-    src: "/images/projects/724events.png",
-  },
-  {
-    quote:
-      "Optimisation SEO et accessibilité pour le portfolio d’une photographe professionnelle.",
-    name: "Nina Carducci",
-    designation: "SEO • Accessibilité • Performance",
-    src: "/images/projects/ninacarducci.webp",
-  },
-  {
-    quote:
-      "Application React pour la réservation de logements avec gestion des routes et composants dynamiques.",
-    name: "Kasa",
-    designation: "React • Routing • Composants dynamiques",
-    src: "/images/projects/kasa.png",
-  },
-  {
-    quote:
-      "Développement d’un portfolio d’architecte d’intérieur avec back-end Node.js.",
-    name: "Sophie Bluel",
-    designation: "JavaScript • API • DOM • CRUD",
-    src: "/images/projects/sophie-bluel.webp",
-  },
-  {
-    quote:
-      "Site mobile-first listant des menus gastronomiques avec animations CSS et performance optimisée.",
-    name: "OhMyFood",
-    designation: "HTML • SCSS • Animations • Mobile First",
-    src: "/images/projects/ohmyfood.png",
-  },
-];
+const GitHubIcon = makeIconComponent(siGithub);
 
 export default function Projects() {
   return (
@@ -58,7 +18,7 @@ export default function Projects() {
           Projets de formation
         </h2>
         <CircularTestimonials
-          testimonials={projects}
+          testimonials={projetsContent}
           autoplay={true}
           colors={{
             name: "#ffffff",
@@ -68,6 +28,34 @@ export default function Projects() {
             arrowForeground: "#ffffff",
             arrowHoverBackground: "#ffffff",
           }}
+          renderActions={(t) => (
+            <div className="flex flex-wrap justify-center gap-3">
+              {t.links?.github && (
+                <a
+                  href={t.links.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white text-neutral-900 px-4 py-2 text-sm font-medium hover:bg-white/90 transition"
+                >
+                  <GitHubIcon
+                    className="h-4 w-4 text-neutral-900"
+                    aria-hidden
+                  />
+                  GitHub
+                </a>
+              )}
+              {t.links?.demo && (
+                <a
+                  href={t.links.demo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-neutral-200 hover:bg-white/10 transition"
+                >
+                  Live Demo
+                </a>
+              )}
+            </div>
+          )}
         />
       </div>
     </section>

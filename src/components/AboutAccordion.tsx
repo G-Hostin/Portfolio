@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import aboutData from "@/content/about.json"; // requires "resolveJsonModule": true in tsconfig
+import aboutData from "@/content/about.json";
 
 type AboutItem = { id: string; title: string; body: string };
 
@@ -41,7 +41,7 @@ export default function AboutAccordion() {
                   {it.title}
                 </span>
 
-                {/* Chevron: points vers le bas, puis rotate-180 quand ouvert */}
+                {/* Chevron vers le bas et rotate-180 quand ouvert */}
                 <span
                   aria-hidden
                   className="text-white/70 transition-transform duration-200 group-open:rotate-180"
