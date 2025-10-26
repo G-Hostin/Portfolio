@@ -2,14 +2,19 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="w-full h-16 flex items-center justify-between px-8 bg-black text-white border-b border-white/10 shadow-[0_4px_8px_rgba(255,255,255,0.25)] z-50">
-      {/* Logo GHOST (stylisé) */}
-      <div className="flex items-center space-x-2">
+      {/* Logo GHOST */}
+      <Link
+        href="/"
+        aria-label="Aller à l'accueil"
+        className="flex items-center space-x-2"
+      >
         <div className="relative w-[120px] h-10 shrink-0">
           <Image
             src="/logo.png"
@@ -17,10 +22,10 @@ export default function Header() {
             fill
             className="object-cover"
             priority
-            sizes="120px" // utile pour le responsive
+            sizes="120px" // pour le responsive
           />
         </div>
-      </div>
+      </Link>
 
       {/* Desktop nav */}
       <nav className="hidden md:flex space-x-6 text-sm text-neutral-300">

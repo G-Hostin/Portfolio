@@ -4,6 +4,7 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import FocusProjects from "@/components/FocusProjects";
 import AboutAccordion from "@/components/AboutAccordion";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Skills />
       <FocusProjects />
       <AboutAccordion />
+      <ContactForm />
     </main>
   );
 }
