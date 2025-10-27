@@ -20,7 +20,6 @@ export function makeIconComponent(
   const Base = fromSimpleIconData(icon);
   const IconComponent: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
     const cls = [baseClass, props.className].filter(Boolean).join(" ");
-    // eslint-disable-next-line react/jsx-props-no-spreading
     return <Base {...props} className={cls} />;
   };
   IconComponent.displayName = `${icon.title || "Icon"}Icon`;
