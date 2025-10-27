@@ -11,7 +11,7 @@ export default function HeroMobile() {
         />
       </div>
 
-      <div className="relative z-10 w-full px-8 py-12 text-white">
+      <div className="relative z-10 w-full px-8 md:pl-16 lg:pl-24 py-12 text-white">
         <h1 className="text-4xl font-bold leading-normal bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
           Grégory Hostin
         </h1>

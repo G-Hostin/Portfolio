@@ -8,7 +8,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full h-16 flex items-center justify-between px-8 bg-black text-white border-b border-white/10 shadow-[0_4px_8px_rgba(255,255,255,0.25)] z-50">
+    <header className="w-full h-16 flex items-center justify-between px-8 md:pl-22 lg:pl-36  bg-black text-white border-b border-white/10 shadow-[0_4px_8px_rgba(255,255,255,0.25)] z-50">
       {/* Logo GHOST */}
       <Link
         href="/"

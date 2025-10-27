@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 export function useMediaQuery(query: string) {
-  const [matches, setMatches] = useState<boolean | null>(null); // <- null tant qu’on n’a pas mesuré
+  const [matches, setMatches] = useState<boolean | null>(null);
   useEffect(() => {
     const mql = window.matchMedia(query);
     const onChange = () => setMatches(mql.matches);

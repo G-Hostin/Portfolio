@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="w-full min-h-[40vh] bg-black/80 flex items-center overflow-hidden">
       <div className="flex w-full h-[40vh] flex-col md:flex-row overflow-hidden">
         {/* Texte */}
-        <div className="flex-1 flex flex-col justify-center px-8 py-12 text-white">
+        <div className="flex-1 flex flex-col justify-center px-8 md:pl-22 lg:pl-36 py-12 text-white">
           <h1 className="text-4xl md:text-5xl font-bold leading-normal bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
             Grégory Hostin
           </h1>
