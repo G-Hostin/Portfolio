@@ -124,10 +124,12 @@ export default function ContactForm() {
           ].join(" ")}
           placeholder="Votre nom"
           aria-invalid={!!(touched.name && nameError)}
-          aria-describedby="name-error"
+          aria-describedby={
+            touched.name && nameError ? "name-error" : undefined
+          }
         />
         {touched.name && nameError && (
-          <p id="name-error" className="mb-3 text-sm text-red-400">
+          <p id="name-error" className="mb-3 text-sm text-red-400" role="alert">
             {nameError}
           </p>
         )}
@@ -154,10 +156,16 @@ export default function ContactForm() {
           ].join(" ")}
           placeholder="votre@email.com"
           aria-invalid={!!(touched.email && emailError)}
-          aria-describedby="email-error"
+          aria-describedby={
+            touched.email && emailError ? "email-error" : undefined
+          }
         />
         {touched.email && emailError && (
-          <p id="email-error" className="mb-3 text-sm text-red-400">
+          <p
+            id="email-error"
+            className="mb-3 text-sm text-red-400"
+            role="alert"
+          >
             {emailError}
           </p>
         )}
@@ -186,10 +194,16 @@ export default function ContactForm() {
           ].join(" ")}
           placeholder="Votre message…"
           aria-invalid={!!(touched.message && messageError)}
-          aria-describedby="message-error"
+          aria-describedby={
+            touched.message && messageError ? "message-error" : undefined
+          }
         />
         {touched.message && messageError && (
-          <p id="message-error" className="mb-3 text-sm text-red-400">
+          <p
+            id="message-error"
+            className="mb-3 text-sm text-red-400"
+            role="alert"
+          >
             {messageError}
           </p>
         )}

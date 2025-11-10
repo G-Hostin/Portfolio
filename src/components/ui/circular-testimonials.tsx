@@ -12,6 +12,7 @@ import { motion, AnimatePresence } from "framer-motion";
 interface Testimonial {
   quote: string;
   name: string;
+  alt: string;
   designation: string;
   src: string;
   links?: {
@@ -193,7 +194,7 @@ export const CircularTestimonials = ({
             <img
               key={testimonial.src}
               src={testimonial.src}
-              alt={testimonial.name}
+              alt={testimonial.alt}
               className="testimonial-image"
               data-index={index}
               style={getImageStyle(index)}

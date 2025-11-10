@@ -2,6 +2,7 @@
   {
     "id": "argentbank",
     "name": "ArgentBank",
+    "alt": "Site internet bancaire",
     "quote": "Application bancaire sécurisée avec authentification, gestion de profil et Redux.",
     "designation": "React • Redux • Authentification • API",
     "src": "/images/projects/argentbank.png",
@@ -12,7 +13,8 @@
   },
   {
     "id": "724-events",
-    "name": "724 Events",
+    "name": "724Events",
+    "alt": "Conférence sur l'UX",
     "quote": "Débogage complet et finalisation d’un site vitrine pour une agence évènementielle.",
     "designation": "Debug • Front-End • Vanilla JS",
     "src": "/images/projects/724events.png",
@@ -24,6 +26,7 @@
   {
     "id": "nina-carducci",
     "name": "Nina Carducci",
+    "alt": "Portrait de Nina",
     "quote": "Optimisation SEO et accessibilité pour le portfolio d’une photographe professionnelle.",
     "designation": "SEO • Accessibilité • Performance",
     "src": "/images/projects/ninacarducci.webp",
@@ -34,6 +37,7 @@
   {
     "id": "kasa",
     "name": "Kasa",
+    "alt": "Site de reservation de logements",
     "quote": "Application React pour la réservation de logements avec gestion des routes et composants dynamiques.",
     "designation": "React • Routing • Composants dynamiques",
     "src": "/images/projects/kasa.png",
@@ -45,6 +49,7 @@
   {
     "id": "sophie-bluel",
     "name": "Sophie Bluel",
+    "alt": "Portrait de Sophie",
     "quote": "Développement d’un portfolio d’architecte d’intérieur avec back-end Node.js.",
     "designation": "JavaScript • API • DOM • CRUD",
     "src": "/images/projects/sophie-bluel.webp",
@@ -55,6 +60,7 @@
   {
     "id": "ohmyfood",
     "name": "OhMyFood",
+    "alt": "Logo création de menu",
     "quote": "Site mobile-first listant des menus gastronomiques avec animations CSS et performance optimisée.",
     "designation": "HTML • SCSS • Animations • Mobile First",
     "src": "/images/projects/ohmyfood.png",
